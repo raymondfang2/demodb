@@ -28,4 +28,11 @@ public class DemoController {
     {
         return repo.getStudent(id);
     }
+
+    //TOBe changed to following REST Standard
+    @GetMapping("/add/{id}")
+    Map<String, Object> add(@PathVariable int id)
+    {
+        return repo.insert(id);
+    }
 }
